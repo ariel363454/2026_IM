@@ -32,7 +32,7 @@ struct WavHeader {
 };
 #pragma pack(pop)
 
-void generateMyWav2(double k, uint32_t s, double r, const std::string& filename = "Mywav2.wav") {
+void generateMyWav3(double k, uint32_t s, double r, const std::string& filename = "Mywav3.wav") {
     // 題目規定：以 44100 的取樣頻率模擬指定取樣頻率 s
     const uint32_t fileSampleRate = 44100;
 
@@ -111,7 +111,7 @@ int main(int argc, char* argv[]) {
         double k = std::stod(argv[1]);
         uint32_t s = static_cast<uint32_t>(std::stoul(argv[2]));
         double r = std::stod(argv[3]);
-        generateMyWav2(k, s, r);
+        generateMyWav3(k, s, r);
     } else {
         double k, r;
         uint32_t s;
@@ -122,7 +122,7 @@ int main(int argc, char* argv[]) {
         std::cout << "r (ex 2): ";
         if (!(std::cin >> r)) return 1;
 
-        generateMyWav2(k, s, r);
+        generateMyWav3(k, s, r);
     }
     return 0;
 }
